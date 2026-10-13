@@ -1,0 +1,23 @@
+ my java trainee program repository: in cmd type this 
+cd C:\Users\DELL\Java-Developer-Trainee-Program-Notes
+
+MyIntro:
+
+Good Morning mam,
+My name is Mohan Balaji ,I am from Vellore ,I have completed my MTech integrated in software engineering from VIT, Vellore and I have strong foundation in java, python, SQL, spring boot framework and i have worked on several projects in this technology like building banking management crud application, course registration system, plant leaf disease recognition system after i completed this kind of projects i gained valuable skills and valuable knowledge through this project in backend development, front end development and full-stack development and i am eagerly waiting for new opportunity to apply my skills in real world project and i am always eager to learn new skills and new technology related to works and related to projects and i want to contribute to building scalable and efficient software solution in software engineering domain. I am looking forward to learn, contribute and grow as a software engineer.
+
+I want to gain practical skills and practical knowledge and practical real world project experience from professional and senior. This is a great chance and great opportunity for me to start my career as well as build my career. I will definitely try to give my best of my work to contributing in challenging project to make great impact in project success as well as company growth.
+
+I am looking forward career growth opportunity in a supportive work environment that encourage a continuous learning mindset. I am particularly interested in this role that offers real time project exposure and hands on project development experiences which will strengthen my skills and to make a strong professional development journey. I would be grateful if you could give me an opportunity to learn, contribute and grow as a software engineer.
+
+I have a 3 months work experience at NXT Wave company as a software development instructor in Hyderabad. In this internship i have gained knowledge on frontend technology like html, CSS, JavaScript. During this internship i regularly completed weekly assigned task like completed online assessment, technical assignment, i deliver demo session through online and offline and in offline i deliver technical concepts effectively in front of my manager and 30+ students. This internship really helped me to improved myself both professionally and technically. Also i gained structure learning experience and gained practical exposure. Overall this internship helped me to improve my communication skill, technical skill and presentation skill.
+
+(Invest my money on my knowledge) => put lot of efforts to improve my skills and knowledge => one day this knowledge will help me to get placed in any company => Then i feel it this is worthy.
+                                                          ||
+I invest my money to improve my knowledge and technical skills and get real-time project exposure and hands on project development experiences and strengthen my backend development skills and make strong professional development journey and add it in my resume then i will get a chance to attend interview and deliver my best of knowledge and easily to get a job opportunity. (Get trainee experience certificate + add it in resume project and say confidently in interview)
+
+In Training program:(Getting great industry knowledge -> get job -> crack project discussion during interview)
+   Build a complete payment system from scratch(design -> development(coding) -> deployment)
+   Implement microservices with real-world architecture patterns.
+   Work on real backend tasks similar to production environments.
+   Apply AI pair programming and modern development workflow.
