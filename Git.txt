@@ -1,0 +1,239 @@
+Git:
+                                           Git & GitHub Basic Workflow
+What is Git?
+Git is a version control system.
+It helps track changes in source code and files.
+Changes can be stored locally and shared with others.
+
+What is GitHub?
+GitHub is a cloud hosting platform for Git repositories.
+Repositories stored in GitHub can be accessed from anywhere.
+It provides backup, collaboration, and code sharing.
+
+Complete Git Workflow
+1. Create a Repository in GitHub
+Sign in to GitHub.
+Click New Repository.
+Enter:
+Repository Name
+Description (optional)
+Public or Private
+Click Create Repository.
+
+2. Clone Repository to Local Machine
+git clone https://github.com/username/repository-name.git
+This downloads the GitHub repository to your local machine.
+
+3. Move into Repository Folder
+cd repository-name
+
+4. Create or Modify Files
+
+Example:
+notes.txt
+README.md
+app.java
+Make any changes you want.
+
+5. Check Changes
+git status
+Shows:
+New files
+Modified files
+Deleted files
+
+6. Add Changes to Staging Area
+Add a specific file:
+git add notes.txt
+Add all files:
+git add .
+
+7. Commit Changes Locally
+git commit -m "Added project notes"
+
+
+At this stage:
+Changes are saved in your local Git repository.
+They are NOT yet available on GitHub.
+
+8. Push Changes to GitHub
+git push origin main
+
+
+Or:
+
+git push origin master
+
+(Depending on your branch name.)
+
+Now the changes are uploaded to GitHub.
+
+Continuous Development Cycle
+Create GitHub Repository
+           ↓
+Clone Repository
+           ↓
+Work on Files
+           ↓
+git add .
+           ↓
+git commit -m "message"
+           ↓
+git push origin main
+           ↓
+Changes Available on GitHub
+           ↓
+Repeat the Process
+
+First Time: Push Existing Notepad Notes to GitHub
+
+Create a folder and put your notes inside:
+
+mkdir my-notes
+cd my-notes
+
+
+Initialize Git:
+
+git init
+
+
+Add notes:
+
+git add .
+
+
+Commit:
+
+git commit -m "Initial commit"
+
+
+Connect to GitHub repository:
+
+git remote add origin https://github.com/username/my-notes.git
+
+
+Push:
+
+git branch -M main
+git push -u origin main
+
+
+After this, your notes will be stored in GitHub and can be accessed from anywhere.
+
+Summary
+GitHub Repository (Cloud)
+          ↑
+      git push
+          ↑
+Local Git Repository
+          ↑
+    git commit
+          ↑
+      git add
+          ↑
+Modify Files
+          ↓
+     git status
+
+
+Think of it as:
+
+Work → Add → Commit → Push → Repeat ✅
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Good question. You either clone OR connect with git remote add origin, depending on the situation.
+
+Case 1: Repository already exists on GitHub → Clone
+
+If you created a repository in GitHub first, then do:
+
+git clone https://github.com/username/my-notes.git
+cd my-notes
+
+
+Now the remote (origin) is automatically configured.
+
+Check:
+
+git remote -v
+
+
+Output:
+
+origin  https://github.com/username/my-notes.git (fetch)
+origin  https://github.com/username/my-notes.git (push)
+
+
+In this case, you do NOT need:
+
+git remote add origin ...
+
+
+because cloning already added it.
+
+Case 2: Notes already exist locally → Add Remote
+
+Suppose you have:
+
+C:\Notes\my-notes
+
+
+with your notepad files already inside.
+
+Initialize Git:
+
+cd my-notes
+git init
+git add .
+git commit -m "Initial commit"
+
+
+Now connect your local repository to GitHub:
+
+git remote add origin https://github.com/username/my-notes.git
+
+
+Then push:
+
+git branch -M main
+git push -u origin main
+
+
+Here you do not clone, because the files already exist on your machine.
+
+Easy Interview Explanation
+Scenario 1:
+GitHub Repo exists first
+→ Clone
+→ Work
+→ Commit
+→ Push
+
+Scenario 2:
+Local Project exists first
+→ git init
+→ git add
+→ git commit
+→ git remote add origin
+→ git push
+
+
+So for your Notepad notes that are already on your laptop, the usual flow is:
+
+git init
+git add .
+git commit -m "Notes added"
+git remote add origin https://github.com/<your-username>/<repo-name>.git
+git push -u origin main
+
+
+No clone is required in this case, because the project is already present locally. Clone is only used when you want to download an existing GitHub repository to your machine.
+
+
+
+

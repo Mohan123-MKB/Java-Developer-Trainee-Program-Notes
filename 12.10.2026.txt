@@ -1,0 +1,119 @@
+12.10.2026:      
+                                                          Achieve Success
+Getting the right knowledge, Master that knowledge in depth, improve technical skills and communication skills, Take actions consistently -> Get a job.
+Patience -> Thinking -> Experiment.
+I need to get job 
+I need to have strong career success
+
+No more complaining
+NO more blaming
+No more crying
+No more staying market is bad
+No more staying I cannot do it
+No more giving up
+No more getting lazy
+No more waiting your day, wasting your life, and saying I want success
+
+Complete daily task whatever given based on what you learned in session.
+checklist task.(linked in post and GitHub push whatever we do)
+previous week task is pending need to complete.
+
+Everyday i improve in everyway.
+Every Single day little improvement needed.
+Actions are follow to become strong and decisions are automatically come.
+Eat well -> daily exercise -> Taking action ->
+create a new tracking sheet: "Daily Tracking" and include all below items in your rows. columns should be your date.
+Time Management must follow.
+Mentor to guide you.
+
+========================================================================================================================
+
+Microservice Principles:[Good conceptual knowledge -> Good logical thinking -> Good System design architecture] needed
+Any of the project we want to build then we need technical architecture (lot of architecture is there like monolithic, microservice, etc..)
+
+9 attributes of microservices (Build the right scalable and reliable system)
+*****************************************************************************************************************************************
+Componentization via service = 
+
+Each service have own business logic(spring boot application) and each service should have its own port, have its own process id, have its own memory, have its own database, coded independently, deployed independently, scale independently, write code in different language.
+
+******************************************************************************************************************************************
+
+2. Organized around Business capabilities = Many features are there
+
+scenario 1 : put related functionalities together =>
+-put related functionality together in one microservice. 
+-You can consider a thought, if f1 is affected, are you ok that even f2 gets affected(due to build/deployment)
+     -if you can ok, both features to be affected even for failure of f1,that mean they are really closely related, and can be in same microservice. 
+     -if you are not ok, then think of splitting it into another microservice.
+
+					Ask:
+"If Feature A changes or fails, is it acceptable for Feature B to be impacted too?"
+If YES → Same microservice.
+If NO → Separate microservices. This is called finding the bounded context.
+
+                                      Example:
+Product Service
+ ├─ Add Product
+ ├─ Update Product
+ └─ Delete Product
+
+Payment Service
+ ├─ Process Payment
+ └─ Refund Payment
+
+scenario 2 : Team arrangement => Whatever team members/skillset needed to work on that microservice should be working together as one team. cross team dependency will not be there.
+
+scenario 3 : size of microservice || no small(due to avoid maintenance work) and no large(due to avoid failure, hard to maintenance- testing- debugging)  => Have only that size of MS which can be managed by around 6-8 people. If you have more feature code to add in the same MS, then better to split into another one.(hire new engineer)
+
+******************************************************************************************************************************************
+
+3. Smart Endpoints and Dumb Pipes(over network) = 
+
+Network call happen here for MS1 wants to communicate with MS2 to get info from other service.[Expose MS2 code as endpoints then MS1 call this endpoints to make request to get response from MS2 service.]
+Multiple ways of communication between 2 services:
+If need immediate response = use sync(Rest APIs)
+If no need immediate response = use Async 1(Messaging System - Event driven architecture; highly scalable system will be maintained;continuous parallel execution)
+Nonblocking system with Rest APIs = use Async 2(Reactive API call - web flux and web client)
+
+Since have multiple microservices, there can be a definite need, that one MS1 wants to call functionality/method of another MS2.
+This should be a call over the network, since both MS are running as separate processes.
+This principles says put all the intelligence at the destination MS level and keep the network pipe light weight. Don't add any logic in middle pipe(dumb pipe).
+In SOA, ESB became very complex and so huge problems. so taking that learning this principle makes strong sense.
+Any microservice can be developed in any programming there are 2 common ways of communication happen SYNC and ASYNC:
+     Sync communication: You call, you wait for response and then you get response then resume further execution, you need the destination service to be up and running to make this call, when you need immediate response/processing then sync communication  do it, spring provides feign client(spring web) for make sync calls.
+     Async communication: Doing parallel process, you start a task and then move to another task in parallel without waiting on previous response. For making Async we can have in 2 styles -> 
+        * Using Messaging system(message broker) : you have some message broker software in middle man like Kafka, ActiveMQ, RabbitMQ;
+sender sends message(data) to the message broker and sender continues its executing without really check if consumer is there, or whether the request is processed.. sender don't wait for consumer response.. it just moved on next execution; The message will be kept in message broker and when receive is available, it consumes and processes. you can build high scalable systems using Async style; wherever its  ok to have some delay in processing (payment after successful confirmation message via notification like that)then you can prefer this approach.
+        * Using Reactive(web flux module and web client library) : The destination should be up and running; there is no broker involved sender directly calls destination and without waiting for response and moves to the next execution in on-blocking style; when destination returns response then sender can process using callbacks(handle async results); Using web flux(web client) we can achieve this style of communication.
+
+*******************************************************************************************
+
+4. Design for failure: Implement Error Handling
+
+Your microservice application is distributed in nature. Services/parts of software running across the network.
+N number of problem can happen, end-end system is working together.
+Network timeouts, service resources(CPU, memory), threads locked..
+        network connection/packet loss
+        unexpected exception while code execution       
+This principles says : We are already expect that failures/error will happen and you need to build microservices to handle these failures.
+Try to anticipate what failures can happen and then provide some technical solution for that.
+
+	Technical solutions:
+
+	1. Circuit Breaker:
+-(use if destination face some problems then sender assume failure then execute continuously then sender check destination after sometimes)
+-when destination service is not doing good then sender should not call destination. Rather assume failure and process directly. Sender will check after sometime, if destination is fine then continue call or continue assuming error.
+-sender resources are available and rest of sender MS functionality can execute.
+
+
+	2. Error handling system:
+-Always return meaningful error messages to caller(it tells clearly what is the problem).
+-In our code we expect failure possibilities then we need to handle properly.
+
+	Monitoring-spring boot actuator
+	Distributed tracing
+	Centralized logging
+
+*******************************************************************************************
+    

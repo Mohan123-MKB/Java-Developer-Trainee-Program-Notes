@@ -1,0 +1,25 @@
+7.10.2026
+If you are logical and you know the concepts then you can use AI for building the application.
+Reading the code and Understand the code is very important.(Basic fundamentals very strong).
+Logical thinking, System designing, Strong Testing, Debugging and Analytic knowledge.
+If I say localhost then server is running in my system, If you say localhost(server Location) then server is running in your system.
+In chrome go and search http://localhost:8080 , localhost=server location and 8080=application is running in this port no.
+In current we know concepts, logic, design architecture, debugging so we can ask AI for code generation( we are declarative it means we need to tell what to do, not need how to do).
+Requirements => Plan => Design => Think business logic => write code by ask with AI => Implement the code => Test the code => Debugging the code by reading and understanding for that we need strong in fundamentals.
+
+As a developer its mandatory to having AI coding skills.
+Being aware of which coding agent is good for what purpose.
+Balancing between cost - quality - time.
+Exploring Opensource model solutions.
+Using AI coding agent effectively for application building.
+setup your GitHub copilot account, login via VS code and understand the AI.
+
+Concepts:
+ Agents, Model, Session, Chat with Agent to write code for our business logic
+
+
+Adding Logging to the project:
+ * Use Slf4j with log back. Use these Lombok libraries need, we need to create object of Logger(log) and then call info()
+   or
+ * Manually create Logger object
+ * Lombok: To remove the boiler plate code, redundant, repetitive code (use Lombok we need to do 2 things => setting an IDE level and add dependency)

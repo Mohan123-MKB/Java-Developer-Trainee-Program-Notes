@@ -1,0 +1,69 @@
+6.10.2026
+1) Interview
+       R1=problem solving
+       R2=Technical[core java, spring boot, core subject, sql, react]
+       R3=Aptitude
+       R4=Communication through Listening, Reading, Speaking, Writing
+(Learn, Practice, Revise and overall revise)
+2) FE Revise
+3) FE + BE + AWS Learn and Revise
+
+Do you have knowledge to build
+Requirements => Plan => Architecture Diagram => Business logic code write using AI => Implement correctly
+
+6.10.2026
+Microservices:
+
+
+
+
+Need of Framework:
+All common reusable code are already done by some developers in the world are called "Framework".
+If user wants to talk to our application business logic then user not able to call our logic directly so that to call our logic we need to do some part of code to connect user request to business logic.
+The connecting user request to calling business logic of application that code is done by some developers are called "Framework".
+
+* For building any real-time application we need framework
+* The common reusable code is done by developer and available in one central place.
+* We need this code, so we take this code in the form of Jar file and add to our project. As a developer we only focus on application functionality.
+* Easy to code, faster application dev, more enhanced features, no need boiler plate code.
+* Finally, The common reusable code that most of the projects need is already coded and available as jars. we take it and use it.
+
+Spring:
+Framework code organized as projects and modules.
+*  Spring Boot is one of the project of spring ecosystem.
+Build tool maven.
+Git for version control, track changes of code )
+Whatever code we will write it as a "Git Repository".
+This git repository is present or hosting on cloud/remote that is called "GitHub/Bit bucket/Git Lab".(parallel development happen)
+Git Branches ( copy of code )
+If some developers want to modify the code then pull the code from GitHub then do modification once completed again push the code on GitHub so the same process happen continuously.(different developers working on different branches(copy of main code) )
+All developers will connect to this "Bit bucket"
+
+Core Development flow using git and bit bucket:
+
+
+
+steps in working bitbucket:
+create bit bucket account
+projects and repositories
+project
+        repo 1
+        repo 2
+        repo 3
+create project:
+repo name: first-app then by default main branch is created
+create integration branch from main branch
+
+1.create account in Bitbucket
+2.craete a project
+3.create a repository already main branch is available
+4.create integration branch from main branch
+5.create feature branch from integration branch
+
+Git repo clone(remote repo): For getting this branch(git repo clone) for our local machine(local repo) then we use sourceTree GUI is there instead using CLI.
+
+git clone: get git repo our local machine from bitbucket => cloud remote repo
+git add and git commit: local changes are saved / committed in our local machine
+git push: push changes code to bitbucket => cloud remote repo
+
+Final overall discussion:

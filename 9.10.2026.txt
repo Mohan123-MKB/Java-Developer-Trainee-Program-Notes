@@ -1,0 +1,48 @@
+9.10.2026 (for study purpose no need to aws deployment right now but we need aware of the things)
+what we need? (ena namaku thevai)
+why we need to use it? (yen ithu namaku thevai)
+what is this?
+why to use this?
+How to connect Linux?
+How to copy jar
+How to change file permission
+starting java spring boot app
+running as background process => writing logs in file
+tail command
+grep
+vi editors
+rest of the common commands, ls, ps, -ef, combine 2 commands using pipe, "kill -9"
+ps -ef | grep
+tail -f app.log
+cd
+mkdir
+date
+pwd
+ctrl+r
+when you make changes, then you should stop existing service ,copy new jar, and start service again, then test.
+
+------------------------------------------------
+Stripe Integration Project:
+2 Microservices:
+payment-validation-service
+        -validation framework
+        -field validation(spring validation)
+        -business validations
+        -security(spring security, HmacSHA256)
+        -DB(MySQL, Spring Data JPA)
+        -Work with Redis Cache
+        -Error Handling System
+stripe-provide-service
+        -integrating with Stripe checkout session API
+        -security when calling stripe
+        -Notification/Webhook
+        -Error Handling
+
+	
+1.Do you feel the need of this project
+2.Do you want this project knowledge
+3.Do you believe, if you have strong project knowledge and hunt aggressively then you will get job opening, and you will showcase your knowledge confidently during interview, and crack the interview and get job.
+4.Are you willing to work strongly every single day to acquire knowledge.
+
+How to use this knowledge to get a job as quickly as possible with great package.
+The best investment is on yourself.

@@ -1,0 +1,49 @@
+8.10.2026
+Take care health first then only our body is support to do work what we want to achieve.
+
+* Strong Technical Knowledge => Project => Communication => Teamwork => work independently => Patience => Hard Work => Discipline =>Consistency.
+
+* Understand the requirements =>
+      Do the right plan =>
+           Are you able to design scalable and reliable system architecture based on requirements and plan =>
+                 Think Business logic based on design =>
+                       Write the code with AI =>
+                            Implement correctly => Testing skills =>
+                                  Deployment and maintenance ability to handle bugs, errors, failures, trouble shooting
+
+* Most of the company expect from freshers Do you have the right knowledge to build the project independently and add value to the company.
+* Are you able to read and understand the code properly.
+* Debugging skills and Analytical thinking (what is this code, why developer write this code, how its working, what business logic written inside this code, are you able modify the business logic based on the requirements).
+* Testing skills, planning, design thinking, business logic thinking, communicate ideas and deliver effectively.
+
+
+8.10.2026
+
+finally entire project code will be available in one place
+when this microservice code is running in aws dev env, it should connect to aws dev db
+when this microservice code is running in aws qa env, it should connect to aws qa db
+like wise for all environments
+how do we build one java code that can run and connect differently in different environments(problem statement)
+
+Profile: logical name given to some set of configurations
+
+application
+
+pick the ip address and assign the ip address then process the data then store the data inside the database.
+we need to create  multiple profile configuration files (same keys with profile specific values)
+in application.properties, activate one profile which you want
+when spring application comes up, it reads application.properties by default, and further checks the profile to be activated.
+spring boot will read the application-<profile-name>.properties file and read the configuration from that file.
+In our controller we use @Value and @PostConstruct annotations to read this property and print.
+By changing the profile in application.properties we are able to see different profile-specific values are being printed in controller.
+
+we can define configuration directly in application.properties.
+something which is common for all environments, can be defined directly in application.properties
+If the keys of application.properties are also defined in profile specific files, the profile values will override the application.properties value.
+                              || or
+[spring comes in application.properies then it looks activate profile then it goes that profile env if it override the values then it will print if not override the values then default values are present in application.properties that value will print]
+
+
+Build jar file once then execute anywhere multiple times for different profile env you want to use; => [ the problem is if you want to run diff profile env then you need to change/activate the profile env it leads each time changing the profile env that time same jar file will build again and again for diff profile env then it execute each jar file for diff profile env. we don't want this kind things.] => solution is at runtime,its possible to choose profile.you will build jar file once and execute it in any environment.while executing you will choose the right profile.we saw demo of updating the profile using java -jar & spring boot dashboard.. similar you can do even for mvn spring-boot:run..
+
+mvn clean springboot:run
